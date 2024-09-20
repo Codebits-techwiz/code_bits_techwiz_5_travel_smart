@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./phone.css">
+
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap links -->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light   sticky-top ">
+        <div class="container-fluid ">
+            <h1 style="margin-top: 12px; color: #141B4A"><i class="fa-solid fa-plane-departure"></i></h1>
+            <h1 style="margin-left: 20px;" class="mt-3 text-dark">Explore <span style="color: #141B4A;" class=" mt-4">World</span></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul  style="margin: auto;" id="hello" class="navbar-nav me-auto mb-2 mb-lg-0 me">
+                    <li class="nav-item ">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mt-4 ">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown " role="button "
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Countries
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown ">
+                            <li><a class="dropdown-item" href="./Madievel.html">Maldive</a></li>
+                            <li><a class="dropdown-item" href="./indonesia.html">Indonesia</a></li>
+                            <li><a class="dropdown-item" href="./japan.html">Japan</a></li>
+                            <li><a class="dropdown-item" href="./usa.html">USA</a></li>
+                            <li><a class="dropdown-item" href="./uk.html">UK</a></li>
+                            <li><a class="dropdown-item" href="./india.html">India</a></li>
+                            <li><a class="dropdown-item" href="./pakistan.html">Pakistan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./privacy.html">Our Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./feedback.html">Feedback</a>
+                    </li>
+                </ul>
+
+                <button style="background-color: #141B4A; color: white; border-radius: 10px; " type="button"
+                    class="btn btn-light me-2 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h6>Signup</h6>
+                </button>
+                <button style=" border-radius: 10px; " type="button"
+                    class="btn btn-light me-2 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <h6>Signin</h6>
+                </button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!--Signup Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="modalForm">
+                        <div class="my-2">
+                            <input type="text" id="name" placeholder="Name" class="form-control" required>
+                            <span id="nameError" class="error-message">Please fill out your name.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="email" id="email" placeholder="Email" class="form-control" required>
+                            <span id="emailError" class="error-message">Please enter a valid email address.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="password" id="password" placeholder="Password" class="form-control" required>
+                            <span id="passwordError" class="error-message">Please fill out your password.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="date" id="date" class="form-control" required>
+                            <span id="dateError" class="error-message">Please select a date.</span>
+                        </div>
+                        <div class="my-2">
+                            <textarea id="address" placeholder="Address" class="form-control" required></textarea>
+                            <span id="addressError" class="error-message">Please fill out your address.</span>
+                        </div>
+                        <button type="submit" class="btn-submit btn-warning"
+                            style="display: block ; margin: 0 auto; padding: 2px 7px; border: 2px solid black;">SignUp</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Signin Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SignIn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signinForm">
+                        <div class="my-2">
+                            <input type="text" id="email" placeholder="Email" class="form-control" required>
+                            <span id="emailError" class="error-message">Please fill out your email.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="password" id="password" placeholder="Password" class="form-control" required>
+                            <span id="passwordError" class="error-message">Please fill out your password.</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning">Signin</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="about-1">
+        <div class="container">
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="text-center mt-5">OUR <span style="color: #141B4A;">STORY</span></h1>
+                        <p class="text-center mt-4">One evening, as the sun dipped below the horizon, I climbed to Piazzale Michelangelo. The panoramic view of the city bathed in golden light took my breath away. I shared that moment with fellow travelers—strangers who soon became friends, bonded over our shared wonder and the beauty of this enchanting city.
+
+                            Next, I headed to Venice, the city of canals. I hopped on a vaporetto, gliding over the shimmering water, the city unfolding like a storybook. I lost myself in the labyrinth of narrow streets, discovering hidden piazzas and charming shops. A gondola ride through the canals felt like a dream, serenaded by the gentle splash of oars against the water.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img style="width: 100%;"
+                            src="https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1333,w_2000,x_0,y_0/c_fill,f_auto,h_1200,q_auto,w_1600/v1/m/4/2/422c917a5d3d306a7b992a5dd256dbe25916d183/20-essential-tips-successful-road-trip.jpg"
+                            alt="Manufacturing Process">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img style="width: 100%;" src="https://thumbs.dreamstime.com/b/transport-travel-collage-plane-ship-bus-isolated-white-path-37508285.jpg"
+                        alt="Manufacturing Process">
+                </div>
+                <div class="col-md-6">
+                    <div data-aos="fade-up" data-aos-duration="3000">
+                        <h1 class="text-center mt-5">OUR <span style="color: #141B4A;">Transport</span></h1>
+                        <p class="text-center mt-4">Once our juices are freshly pressed and blended, they are
+                            immediately
+                            bottled to preserve their natural flavors and nutrients. We use only high-quality, BPA-free
+                            bottles that are designed to keep your juice fresh for longer, without compromising on taste
+                            or
+                            health benefits.
+                        </p>
+                        <p class="text-center">Our packaging is not only functional but also eco-friendly. We are
+                            committed
+                            to reducing our environmental impact, which is why we choose sustainable materials that can
+                            be
+                            recycled after use. Each bottle is securely sealed to prevent leaks and maintain the
+                            integrity of
+                            the juice inside.
+                        </p>
+                        <p class="text-center">We understand that convenience is key, so our packaging is designed to be
+                            both
+                            durable and easy to carry, whether you’re on the go or storing them in your fridge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-3">
+        <div class="container">
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 10%;">
+                        <h1 class="text-center mt-3">OUR Travel <span style="color: #141B4A;">Guarantee</span></h1>
+                        <p class="text-center mt-1">During your travels, we promise to be there for you 24/7. Should any unexpected challenges arise—be it a flight delay, a change in accommodation, or an unforeseen circumstance—we will swiftly assist you in finding solutions to ensure your trip continues smoothly. Our local partners and experienced guides are carefully vetted to provide you with authentic experiences and high-quality service, allowing you to immerse yourself in the local culture without worry.
+
+                            Moreover, if your experience does not meet our high standards of quality, we will work diligently to address any concerns and make it right. Your satisfaction is our top priority, and we are committed to transforming any inconvenience into a positive outcome.
+                            
+                            Traveling should be a source of joy and discovery, and we are here to support you every step of the way. With [Your Travel Agency Name], you can embark on your next adventure with confidence, knowing that your journey is backed by our unwavering commitment to excellence and your complete satisfaction.
+                            
+                            
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img style="width: 100%;"
+                            src="https://www.allscandcargo.com/wp-content/uploads/2011/07/quality-transport-warranty-300x234.jpg"
+                            alt="Manufacturing Process">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img style="width: 100%; margin-top: 70px;" src="./istockphoto-613527558-612x612.jpg" alt="Manufacturing Process">
+                </div>
+                <div class="col-md-6">
+                    <div data-aos="fade-up" data-aos-duration="3000">
+                        <h1 class="text-center mt-5">OUR <br><span style="color: #141B4A;">DISCLAIMER</span></h1>
+                        <p class="text-center mt-2 container">Travel Risks: Travel involves inherent risks, including but not limited to accidents, illness, natural disasters, and other unforeseen events. By participating in any travel arrangement, you assume all risks associated with your travel.
+
+                            Liability Limitations: [Your Travel Agency Name] acts only as an intermediary between you and the various suppliers of travel services, including airlines, hotels, and tour operators. We are not liable for any damages, losses, or delays caused by these suppliers, including but not limited to changes in itinerary, pricing, or service availability.
+                            
+                            Travel Documents: It is your responsibility to ensure that you possess all necessary travel documents, including passports, visas, and any required vaccinations. Failure to provide proper documentation may result in denied entry to your destination, and we will not be liable for any related costs or inconveniences.
+                            
+                            Insurance: We strongly recommend that all travelers obtain comprehensive travel insurance to cover trip cancellations, medical emergencies, and lost belongings. [Your Travel Agency Name] is not responsible for any expenses incurred due to unforeseen circumstances.
+                            
+                            
+                        </p>
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Important Links -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>IMPORTANT LINKS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <!-- Variety -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>Countries</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="./Madievel.html">Maldive</a></li>
+                        <li><a href="./indonesia.html">Indonesia</a></li>
+                        <li><a href="./japan.html">japan</a></li>
+                        <li><a href="./usa.html">usa</a></li>
+                        <li><a href="./uk.html">uk</a></li>
+                        <li><a href="./india.html">india</a></li>
+                        <li><a href="./pakistan.html">pakistan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>GET IN TOUCH</h4>
+                    <address>
+                        302, Marine Faisal Building, 10 Shahrah-e-Faisal Rd,<br>
+                        PECHS Extension Block 6, Karachi, Sindh, 75400<br>
+                        <a href="tel:+923122772796"><i class="fa fa-phone"></i> 0312-2772796</a><br>
+                        <a href="mailto:info@gmail.com"><i class="fa fa-envelope"></i> Email: info@gmail.com</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div style="background-color:#A6E0FA; height: 100%;  " class="footer-bottom">
+        <div class="footer-bottom-sub">
+
+            <div class="footer-bottom-left">
+                <h5 style="color: #141B4A;">© 2024 Explore World — @Travel</h5>
+            </div>
+
+            <div class="footer-bottom-right">
+
+                <a href="https://www.instagram.com/hasnain_raza5764/?next=%2F" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                        alt="Instagram Logo">
+                </a>
+
+
+
+                <a href="https://www.facebook.com/hasnainraza.topiwala" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook Logo">
+                </a>
+
+                <a href="https://www.linkedin.com/in/hasnain-raza-089b8930a/" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        alt="LinkedIn Logo">
+                </a>
+
+
+
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"
+            integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>

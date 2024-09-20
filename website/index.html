@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./phone.css">
+
+    <!-- Use only one version of Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light   sticky-top ">
+        <div class="container-fluid ">
+            <h1 style="margin-top: 12px; color: #141B4A"><i class="fa-solid fa-plane-departure"></i></h1>
+            <h1 style="margin-left: 20px;" class="mt-3 text-dark">Explore <span style="color: #141B4A;"
+                    class=" mt-4">World</span></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul style="margin: auto;" id="hello" class="navbar-nav me-auto mb-2 mb-lg-0 me">
+                    <li class="nav-item ">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mt-4 ">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown " role="button "
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Countries
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown ">
+                            <li><a class="dropdown-item" href="./Madievel.html">Maldive</a></li>
+                            <li><a class="dropdown-item" href="./indonesia.html">Indonesia</a></li>
+                            <li><a class="dropdown-item" href="./japan.html">Japan</a></li>
+                            <li><a class="dropdown-item" href="./usa.html">USA</a></li>
+                            <li><a class="dropdown-item" href="./uk.html">UK</a></li>
+                            <li><a class="dropdown-item" href="./india.html">India</a></li>
+                            <li><a class="dropdown-item" href="./pakistan.html">Pakistan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./privacy.html">Our Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mt-4 " aria-current="page" href="./feedback.html">Feedback</a>
+                    </li>
+                </ul>
+
+                <button style="background-color: #141B4A; color: white; border-radius: 10px; " type="button"
+                    class="btn btn-light me-2 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h6>Signup</h6>
+                </button>
+                <button style=" border-radius: 10px; " type="button" class="btn btn-light me-2 mt-3"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <h6>Signin</h6>
+                </button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!--Signup Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="modalForm">
+                        <div class="my-2">
+                            <input type="text" id="name" placeholder="Name" class="form-control" required>
+                            <span id="nameError" class="error-message">Please fill out your name.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="email" id="email" placeholder="Email" class="form-control" required>
+                            <span id="emailError" class="error-message">Please enter a valid email address.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="password" id="password" placeholder="Password" class="form-control" required>
+                            <span id="passwordError" class="error-message">Please fill out your password.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="date" id="date" class="form-control" required>
+                            <span id="dateError" class="error-message">Please select a date.</span>
+                        </div>
+                        <div class="my-2">
+                            <textarea id="address" placeholder="Address" class="form-control" required></textarea>
+                            <span id="addressError" class="error-message">Please fill out your address.</span>
+                        </div>
+                        <button type="submit" class="btn-submit btn-warning"
+                            style="display: block ; margin: 0 auto; padding: 2px 7px; border: 2px solid black;">SignUp</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Signin Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SignIn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signinForm">
+                        <div class="my-2">
+                            <input type="text" id="email" placeholder="Email" class="form-control" required>
+                            <span id="emailError" class="error-message">Please fill out your email.</span>
+                        </div>
+                        <div class="my-2">
+                            <input type="password" id="password" placeholder="Password" class="form-control" required>
+                            <span id="passwordError" class="error-message">Please fill out your password.</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning">Signin</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- main section start -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="height: 600px" src="./Untitled design.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><span id="element"></span></h1>
+                    <p class="text-light">Explore world</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="text-center mt-5">
+            <h1> <span class="text-warning"></span> Our Tour<span style="color: #A6E0FA;"><br>Packages</span></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-group mt-5">
+            <div class="card" data-aos="zoom-in">
+                <img src="./pacage.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-warning">20 Days In Thailand</h5>
+                    <p class="card-text text-center mt-3">Special Offer</p>
+                    <p class="card-text text-center">$ : <DEl>249</DEl> </p>
+                    <p class="card-text text-center">$ : 199 </p>
+
+                </div>
+                <div class="container ">
+                    <small class="text-muted"><button
+                            style="width: 115px; display: flex; justify-content: center; align-items: center;  background-color: #141B4A; border-radius: 15px; color: white; "
+                            class=" container my-2 btnOpenForm" onclick="openpopup()">Book Now</button></small>
+                </div>
+
+
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <img src="./pacakge 2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-warning">10 Days In Bali</h5>
+                    <p class="card-text text-center mt-3">Special Offer</p>
+                    <p class="card-text text-center">$ : <DEl>399</DEl> </p>
+                    <p class="card-text text-center">$ : 299 </p>
+                </div>
+                <div class="">
+                    <small class="text-muted"><button
+                            style="width: 115px; display: flex; justify-content: center; align-items: center;  background-color: #141B4A; border-radius: 15px; color: white;"
+                            class=" container my-2 btnOpenForm " onclick="openpopup()">Book Now</button></small></small>
+                </div>
+            </div>
+
+
+            <div class="card" data-aos="zoom-in">
+                <img src="./Package 3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-warning">50 Days In Maldives</h5>
+                    <p class="card-text text-center mt-3">Special Offer</p>
+                    <p class="card-text text-center">$ : <DEl>4999</DEl> </p>
+                    <p class="card-text text-center">$ : 3999 </p>
+                </div>
+                <div class="">
+                    <small class="text-muted"><button
+                            style="width: 115px; display: flex; justify-content: center; align-items: center;  background-color: #141B4A; border-radius: 15px; color: white;"
+                            class=" container my-2 btnOpenForm" onclick="openpopup()">Book Now</button></small>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <h1 style="color: #141B4A;" class="text-center mt-5"> Popular Places </h1>
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="row mt-5 ">
+            <div class="cards">
+
+
+                <div style="border-radius: 100%; height: 200px; border: none; border: 3px solid bla; width: 200px; display: flex; justify-content: center; align-items: center; color: #141B4A;"
+                    class="card ">
+                    <div class="circle">
+
+                        <div style="height: 100px; background-color: or;"
+                            class="col-4  text-dark d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                    <h1 class="" id="count1">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <h2 style="font-size: 25px;" class="bottom1">Thailand</h2>
+                    </div>
+
+                </div>
+
+                <div style="border-radius: 100%; height: 200px; width: 200px; border:none; display: flex; justify-content: center; align-items: center; color: #141B4A;"
+                    class="card ">
+                    <div class="circle">
+                        <div style="height: 100px;" class="col-4  text-dark d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                    <h1 id="count2">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <h2 style="font-size: 25px;" class="bottom2">Indonesia</h2>
+                    </div>
+                </div>
+
+
+                <div style="border-radius: 100%; height: 200px; width: 200px; border: none; display: flex; justify-content: center; align-items: center; color: #141B4A;"
+                    class="card ">
+                    <div class="circle">
+                        <div style="height: 100px;" class="col-4  text-dark d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                                    <h1 id="count3">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                        <h2 style="font-size: 25px;" class="bottom3">Maldives</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <h1 class="text-center mt-5">New <span style="color: #141B4A;"> Arrivals</span></h1>
+        <h1 class="text-center mt-5"> Premium <span  style="color: #141B4A;"> Packages</span></h1>
+    </div>
+
+    <div class="my-3 container">
+        <input id="inp" type="text" placeholder="Search Here" class="form-control">
+    </div>
+
+    <div id="products-card" style="gap: 20px;" class="products-card  ">
+
+
+        
+    </div>
+
+    <div class="form-popup-bg">
+        <div class="form-container">
+            <button id="btnCloseForm" class="close-button">X</button>
+            <h1 class="text-center">Book Now</h1>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="name" class="form-control" required />
+                    <span id="nameError" style="color: red; display: none;">Please fill out the name.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail Address</label>
+                    <input id="email" name="email" type="email" placeholder="email" class="form-control" required />
+                    <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="contact number" class="form-control" />
+                    <span id="phoneError" style="color: red; display: none;">Please fill out the phone number.</span>
+                </div>
+
+                <button type="submit" class="mighty">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Important Links -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>IMPORTANT LINKS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <!-- Variety -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>Countries</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="./Madievel.html">Maldive</a></li>
+                        <li><a href="./indonesia.html">Indonesia</a></li>
+                        <li><a href="./japan.html">japan</a></li>
+                        <li><a href="./usa.html">usa</a></li>
+                        <li><a href="./uk.html">uk</a></li>
+                        <li><a href="./india.html">india</a></li>
+                        <li><a href="./pakistan.html">pakistan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-md-4 col-sm-12">
+                    <h4>GET IN TOUCH</h4>
+                    <address>
+                        302, Marine Faisal Building, 10 Shahrah-e-Faisal Rd,<br>
+                        PECHS Extension Block 6, Karachi, Sindh, 75400<br>
+                        <a href="tel:+923122772796"><i class="fa fa-phone"></i> 0312-2772796</a><br>
+                        <a href="mailto:info@gmail.com"><i class="fa fa-envelope"></i> Email: info@gmail.com</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div style="background-color:#A6E0FA; height: 100%;  " class="footer-bottom">
+        <div class="footer-bottom-sub">
+
+            <div class="footer-bottom-left">
+                <h5 style="color: #141B4A;">© 2024 Explore World — @Travel</h5>
+            </div>
+
+            <div class="footer-bottom-right">
+
+                <a href="https://www.instagram.com/hasnain_raza5764/?next=%2F" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                        alt="Instagram Logo">
+                </a>
+
+
+
+                <a href="https://www.facebook.com/hasnainraza.topiwala" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook Logo">
+                </a>
+
+                <a href="https://www.linkedin.com/in/hasnain-raza-089b8930a/" target="_blank">
+                    <img style="height: 30px; margin: 0px 10px;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        alt="LinkedIn Logo">
+                </a>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"
+        integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Dream Destination',],
+            typeSpeed: 100,
+            loop: true,
+            loopCount: Infinity,
+        });
+
+        AOS.init();
+
+    </script>
+
+    <script>
+        var typed = new Typed('#element1', {
+            strings: ['Our Manufacturing',],
+            typeSpeed: 100,
+            loop: true,
+            loopCount: Infinity,
+        });
+
+        AOS.init();
+
+    </script>
+    <script>
+        var typed = new Typed('#element2', {
+            strings: ['Our Packaging',],
+            typeSpeed: 100,
+            loop: true,
+            loopCount: Infinity,
+        });
+
+        AOS.init();
+
+
+
+    </script>
+
+    <script>
+        let client = setInterval(clientDone, 2);
+        let project = setInterval(projectDone, 2);
+        let coffee = setInterval(coffeDone, 2);
+        let count1 = 1;
+        let count2 = 1;
+        let count3 = 1;
+
+        function clientDone() {
+            count1++;
+            //console.log(count1);
+            document.getElementById('count1').innerHTML = count1;
+            if (count1 == 7000) {
+                clearInterval(client);
+            }
+        }
+
+        function projectDone() {
+            count2++;
+            document.getElementById('count2').innerHTML = count2;
+            if (count2 == 9000) {
+                clearInterval(project);
+            }
+        }
+
+        function coffeDone() {
+            count3++;
+            document.getElementById('count3').innerHTML = count3;
+            if (count3 == 6000) {
+                clearInterval(coffee)
+            }
+        }
+    </script>
+
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function (event) {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('phoneError').style.display = 'none';
+
+            // Validate name
+            const name = document.getElementById('name').value;
+            if (!name) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email').value;
+            if (!email || !email.includes('@')) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate phone number
+            const phone = document.getElementById('phone').value;
+            if (!phone) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+
+        // Close form
+        document.getElementById('btnCloseForm').addEventListener('click', function () {
+            document.querySelector('.form-popup-bg').style.display = 'none';
+        });
+
+        let data = [
+    {
+        "country": "France",
+        "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAPFBMVEX///8AJlTOESYAGk5peJDdb3jNABoAIVHNAB9XWHbaYWr77O4AFEvdbXbMABBRU3OMiZ3/8/PkjJTaXGaR5sxrAAABEklEQVR4nO3Qxw2AMAAEsNB7Cey/K1OcxMMewaWJ6fqSM4xtTHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOPnbyRSzJ0+Oc44pS8x11y2lPu8a8wEkE9v5Czl+SQAAAABJRU5ErkJggg==",
+        "description": "Known for its art, fashion, and cuisine.",
+        "capital": "Paris",
+        "popularAttractions": ["Eiffel Tower", "Louvre Museum", "Palace of Versailles"]
+    },
+    {
+        "country": "Italy",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
+        "description": "Famous for its historic sites and delicious food.",
+        "capital": "Rome",
+        "popularAttractions": ["Colosseum", "Venice Canals", "Leaning Tower of Pisa"]
+    },
+    {
+        "country": "Japan",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
+        "description": "A blend of tradition and modernity.",
+        "capital": "Tokyo",
+        "popularAttractions": ["Mount Fuji", "Tokyo Tower", "Kyoto Temples"]
+    },
+    {
+        "country": "Australia",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
+        "description": "Known for its unique wildlife and beautiful landscapes.",
+        "capital": "Canberra",
+        "popularAttractions": ["Sydney Opera House", "Great Barrier Reef", "Uluru"]
+    },
+    {
+        "country": "Canada",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+        "description": "Famous for its stunning nature and multicultural cities.",
+        "capital": "Ottawa",
+        "popularAttractions": ["Niagara Falls", "Banff National Park", "CN Tower"]
+    },
+    {
+        "country": "Brazil",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+        "description": "Known for its vibrant culture and beautiful beaches.",
+        "capital": "Brasília",
+        "popularAttractions": ["Christ the Redeemer", "Iguazu Falls", "Copacabana Beach"]
+    },
+    {
+        "country": "Spain",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
+        "description": "Rich in history and famous for its festivals.",
+        "capital": "Madrid",
+        "popularAttractions": ["Sagrada Familia", "Alhambra", "Park Güell"]
+    },
+    {
+        "country": "Mexico",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
+        "description": "Known for its ancient ruins and vibrant culture.",
+        "capital": "Mexico City",
+        "popularAttractions": ["Chichen Itza", "Cozumel", "Frida Kahlo Museum"]
+    },
+    {
+        "country": "Thailand",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg",
+        "description": "Famous for its stunning beaches and rich culture.",
+        "capital": "Bangkok",
+        "popularAttractions": ["Grand Palace", "Phuket", "Chiang Mai Temples"]
+    },
+    {
+        "country": "Germany",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+        "description": "Known for its history, architecture, and beer gardens.",
+        "capital": "Berlin",
+        "popularAttractions": ["Brandenburg Gate", "Neuschwanstein Castle", "Berlin Wall"]
+    },
+    {
+        "country": "India",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+        "description": "Rich in diversity, culture, and history.",
+        "capital": "New Delhi",
+        "popularAttractions": ["Taj Mahal", "Jaipur", "Varanasi"]
+    },
+    {
+        "country": "Egypt",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+        "description": "Home to ancient civilizations and iconic landmarks.",
+        "capital": "Cairo",
+        "popularAttractions": ["Pyramids of Giza", "Luxor Temple", "Nile River"]
+    },
+    {
+        "country": "United Kingdom",
+        "imageUrl": "data:image/png;base64,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",
+        "description": "Known for its rich history and cultural heritage.",
+        "capital": "London",
+        "popularAttractions": ["Big Ben", "British Museum", "Tower of London"]
+    },
+    {
+        "country": "China",
+        "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAjVBMVEXuHCX//wDtACb71w/uEyXuDSb//ADuACX++APyYB/vLiPyZh75uhP4shX+9gT84wr97Af3phfwSSH96Aj82wzzcB31lBn5vxL+8AXxVSD5xBHzexzuJCT70A/xWyDvOSL3qxb2mhj0ghvyax7wQSL1jRr2nhf6yBD1jxr4thT0fRz70RD0hhvzdR3wTiKM2NAWAAAEoklEQVR4nO3cbXeaMBgGYPOYiOILqKhoUdtpbdfV/v+ft0RAcFpNWFsh3NeXnZ3VHXKT96Q2GgAAAABQc+LeD1A+9LDi936GskiqhxixNTKJRVOHZBY8ajFEkqA+67skHJ+16d7PUho0YGy5ChjzkUlK7FmsiUyOqBln4q3J9uFYu8fkLktryoSsrit8pPuT1GFHg537nQ91ZzTr6NUUOTE5ChfTD4tHZBr0tdoBj9pJILO9S0QWR8LnLNTKxAkZa73IoZjNbc5DoUfGdJqBWLw8j4hUN7u1PJIGydf/qFNR4uZCQ2b91J6rjtNkYioztHoYbsTvnbGR/qsXE+uXOzRWmQxNKopWS6swvj2MrmOTYp7M6y3sW2gXTzmK7hJFW/tWPuTFmewKtgfy1+n2my01hq+TqalXNJOg5apQBG26loRCT+kCpmDjoR4bREJQJ7BmhE6bDmNPxYqkQh3wrpzx/7Ikk2xDpGjjERP52ZbhtK/UaJqt/t1CjYfSVPe2jD8UZJlMC7xoov04/nRQzWpC5xpZJLJU566/e0Fv/rHpOZUcdWZB819eLhN29q9N7/laKOK9nft00cH8vuSwaejGUMJHD8NlmNWzHyrHl6KJUSKee6uUXMj2pbrpMKxuKFFwK4jMo94G42EwXhPvvM6quV7m6ZLvpnZHs4BqYd0j1eFW9sSH5gOdSJZce7ohGIsqOeZkhPNyO5JXky0mzaOQUqNfNxLxRyaFpGb0bY/6c2g9vhZJz+yAnNtxssGp/3kke9OWYEUkEm1alxMJbk5K7EWN5qVIhrafel5FmwuRtOpbSRRaXKonE1t2QQqhi93Jos4VRVxeD9a68dDs8rizqXHjoU/G4lmBimJJjKJ7OZIijUeYrI5K7GTP7WmZ+0vX+K2Tb/6ZMso1ncEH5Y80esYvPSrU4EpHZBddXxz5kml03FYdmJZPvDHmfMtT/iz6nUaQbEOLbBzqGDYENfl7s6DxULLZNl4fawWlv2Cgv0PE40OgNmN/5B+OiKp8s5qv0uLnVnzkemaNh2/6j/3e4o/6kK+OerwqZxJvn7S6p6Xn8XU/NtddGue7ZqMKVkbqSixrNs7KQB31uvWPJMjNnY08VDoS/sHUkfmF6iCEnKro3TSP/yd6TRLxt5WORN0mDz/bhqZnvZvmx59PNrxNLpOWEbUXzqeDJ21Dk44h3YYxntaUCx89XysAp53BbEONxO2g0JqgVG6d8Rm8cj6XQ3CkLrXVejfqhBy+e7KzVidGNszvvwSN3w/1Q85trt7fqZNonjYZsuGE9GvU+TjoBII4Q78xxvyDdgazf8tto8MlDOpW9DbftxjMVkTCVVtI936UslCbuOHQ9RlbIpPU8QAE8/iMk1wmD+ZWf1uBkewIJNy5SOWAR7ntV0/zG0IsR8dfTWHLVzuuO/4vSm8bL1Z2f/2JvsNd/dCr/Bb9FxIPbDldk9Oq+623HL5yVINRZ6imR8r2SjoQ2atonxTWh9EBUD3Qu8E3yNQFehMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA49ReVBijAyEOfcwAAAABJRU5ErkJggg==",
+        "description": "Famous for its ancient history and stunning landscapes.",
+        "capital": "Beijing",
+        "popularAttractions": ["Great Wall of China", "Forbidden City", "Terracotta Army"]
+    },
+    {
+        "country": "Russia",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+        "description": "Known for its vast landscapes and rich history.",
+        "capital": "Moscow",
+        "popularAttractions": ["Red Square", "Kremlin", "Hermitage Museum"]
+    },
+    {
+        "country": "Greece",
+        "imageUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEA8PEA8QEA8PDw8QDw8QDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGi0fHR0tLS0tLS0rKy0tLS0tLS0tLS0tLSstKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBEQACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAADBAECBQYABwj/xABUEAABAwIBBAoMCgQNBQAAAAABAAIDBBEFBgcSMSFBUVRxcoGRsdIiRFJhkpOUocHC0dMTFBYXMjRCU7LDYmOEsxUkJTNDVXN0gqKjpLQjRWTh4//EABoBAQEBAQEBAQAAAAAAAAAAAAABAgMEBgX/xAA+EQACAQAGBwYDBwMDBQAAAAAAAQIDBBEUUZEFExUxUqHREiFBQmHhU4GxIjJxkqLB4iRi8DND0iM0crLx/9oADAMBAAIRAxEAPwDgwvtD8wIxy0QpK1YaKgd1g0fcckLPoKM/+NC3lawNPQvl62rKef4s91H9xGk+Oy85shjyEB8ey8d/KdZxoDz0sJX1Gj3/AE0Pn9WeGnX2zHicvachnQusgWmgSwCxastFKELJSQUTBdpXRMyEBWiHnNQAy1ZsLaVLVlo0DXMpdrlpMgVpXVGSyAkLaISQjQBuasNFI0UsAJ7VykjSKtKwmUklW0F2OW4sjQxG5dkzAZbIBkasyRQGiuXZLaWIWgSCqA4FwhBaRtlzaNH2HNvVaWHwA7JYZozySusOYhfN6QjZWJetj5HtoX9hHWyR3FwvEdRKRlkB8ay8P8p1fDT/APEhX01Qf9ND5/8AszxU33jFY5e04j1O+6oDPbdAI1EVlALEKNFKWWClgVpMBAtpmQgK0Qq4JYChCy0UG4LnJGkUWChWOXSLMsKFshYLSIWWyHtFZaKV0FLADkYsSRUAIXFo2VJUBLSiYDRuXeLMNDMbl1TIWeFWQBorFhSNpYRSqoCROsqiBp47i4UaKd9msl/i87L3LKgPtuNfE0Dzxu86+f0tGyki8V9G+p7Ku/stH0Sim2ivyzuWqoLcCA+HZwG2xOq/Z/8Aiwr6Wof9tD5/VnipfvswGr2JnINC+y2QejfdARILoCuFUAnqYIC4sE0rIi4AEt0ja4C5U09XRymu+xWlirWlidvNmwjGqrlv34WEfiX421ZcCzPVd1iZ782rx9Gsae86mI84kK2tKrxhz9iOrvElmbWc6qqDlZIF0Wl4cLzM3d4jMea6oPbcA4I5CrtiHA80Ls8RqPNS8/Sr2DvNpXHzmQdCj0zHwhz9hdniMjNTF9qslPFhY3pcVzemJeEFmzV2WJV+a2nHbVT4MI9Vc3pakflXMt3WJn1GbSIaqqbljjPRZTak+FcxqFiJfNy6+xWD/FTHpEnoXSOlUt8OfsS7+odmbWXarIuWF49ZdNrx4HmZuzxGI82E57bg8XItLTEOB5oXZ4jEeaec662EcEEjvWC1tqHA8/YXZ4jUOaN32q8Hi0pHTIVh6aT3UfP2LdvUZbmli262XkhYOlxXPbMuBZst2WJd2aelts1VUT3vgB6hWXpilflXPqVVaOLM+pzX0o7Yq/Cg92ub0rSvyx59S6iOP+ZGbPm4gGqoqOURHoaE2nPxiufUahYib83rNqqeONC09DgqtJy8Y8xqFiEhzbk9vAfspP5q6rSyXk/V7Gbv6mnS5rSddeOSlt+at7Z/s5+xLt6mpHmni262U8WFg6SVl6an4QWbF2WIT5p6TfVX/t+osbZpeGPPqau0cWfHoDfYX7UWeVkvbZbIQCgGqaTaK0Q7fNgy0tWzuooZB/ge4fmBfjaYj9mEvV87Oh6as+9ndtdolfhHrNelkD26J17SA+JZzYdHE6jY1tpz/oMHoX0uju+rR+f1Z4qb77OVXrORZpWkBiGRaIMaSAcwB1q2jduVdN++auNZVtDNf2v6GoOyS/E+4Sxr5E/REpY0BWJ1kBoQPQDTCgCWQAnsQCNRCgM2SMgoAkUiA0qWRAakRQB2oCyAnRQCFdToDCqoUBmStsgCU8iA2qORAa8LthAXugPytE+y+tgz85jr3tIvpDnC9CTMWoX0xujnCWMWhGORA+gZp5NKtezuqWXzSRFfm6WX/QTwa+jO9Xf2/kfQqyGxXzh7QdLMWlAfNM6dnV5cSAXU8DtrV2TfVK+k0X31f5v9jw1jumcO57e6HOF73FnJMgOG6FktoRpWkyDEb1og1h8ujPA7uZ4X+DI0+hc6RWwkvR/Q0t6P0FMzZPCV8cfpCssSASeyyALA+yA0InIBgFAeIQApIr7RQCNTTHcKWgznsIQB6aWxQG5RyXQDzUBIQFwgIkZcIDGrqU7h5ktBh1UB3DzKWoCNiDqKoNOilQG5TybCAZv3igPmlDhVLE7saaAd/wCCYTzkXXWVPSy3yeZlRityO0whzLBugwDvNaAFz7TxLYg9ZQRnYdFG4bjo2OHnCqnJbmLEZE2TtC43dRUpJ2/gIwecBdY1qnjum82Rwi96HMGwGjppBLBTRxSWLdNmlfROsWvbaSkrVNSR7M5NokaOMXaka1dCHC4XA2YMzC0oA1I5uldzGE2tctaTbcuVU2vEDk9Owi4Y23FalrBlVOFQO+lT07uNDEfQtqlpFuk82TsrAT+TlAddFS8kEY6AuirdOvO82Z1ccBiLJXDt403i1b7WON5k1UMEORZM4eCCKGk2CDf4CO/Qo63WH55Zsqo4YI+M4jjNYJZWmsrOxllbYVVQB2LyNQd3l9LR0FD2IvsR3LwXQ8TnK194i/E6k66qqPDUzn1lvU0XAskZ7TxK/wAKVQ1VdWOCpnHrLLoKLgWS6FU5Yhosoq5n0ayp5Znu6SuTqtC98Fka1ksRluVmI79qPCHsRVOr8CGsniWOVeInt6p5JXDoXRVOr8CyM6yeIB2O1p11tZyVVQOhy6qr0K8kcl0J25YgH4lUHXU1J4aiY9LlrU0a3RWSJ2niVbXTffTeOk9qy6KHCskLXiefWVA2RUVA4J5R0FcpUNHwrJG1J4no8drGHYq6nlnkd0kri6tQvfBZI125YmjS5XYgO3ajw0VUq/AiOkniPHKnECL/AB6p5JCF3VUq/AsjOsniLTZR17tdbV8lRK3oK6xqtAvIskR0kn4sXOMVR11lWeGqqCPxLeool5I5Iz2pPxeZLK+U65pTwyyH0q6uHCskLXiAqnOdrc48LiVHBYC1mZJcbZ5yuUoo0mwZqZRqllHBI8eleeVHHBZI3ay8eJ1A1VNSOComHQ5ZVHR8KyRe08RhuLVJ11VSeGomPrLtGjo+FZIy28Sf4Qm+/n8dJ7V11cOFZIxa8eZ9bxGEtddfGn6Y1hVVqQHWRPEjO+EAnKxARE9AaEMlxYoBDEKfcQGTstKA0qSe4sUBeZiATkbZAEhkQDsb0B8Bygbo1lWNyqqf3zl9fV3bRQf9q+h+dP7zM4rsYKlQEWWWjSJaFkFl1TISFshKAhAGj2VzaKAqIrLk0aTAtNlEU0KWZdYsww0jV1TIAK2QlrkATSWWBWZq5yRRR7VylE2mCcFxaKS1yqYCaS69olh95x2SFt9OaFvGlY3pK+SVHOW5N/I/QtRyTcoqSN31qE8V4f8Ahuuiq1M/K8iduOJs4fnEw+PXO926G09QfOWgLtHR9Yl5ea6mXTQXiNVOcLDdenPY/qHe1dNl1jBZozeIf4j2G5Y0NTKyGKV5lfpaDXQytvotLj2VrDYadZXGlqNNRRcpLuXqjUaWMnYjpoJF5DoNOGkEBhYwWQsdLI4MjZYueb2aCQLnlIWoQc2ox72yNpd7OeZljQNP1pnI2U9DV6LlT8P0Ma2GI43L/DLWNUeSmqz0RrotHVl+XnHqNbDEDJl5hh7Yf5LV+7TZtZ4f1R6jWwxKw5Z4c47FU0caKoj/ABMCxKoVheXmn9GNbDE0afKzDz29TDjStb02WbnT8DyKqSD8T5vj+A1c9XUzQUs0sM08ssUsbC6OSN7i5r2uGwQQQQV+9V6zQwoownJJpWNPemjyTo5OTaQkMksRPaNRytA6Sul9q/GjGqngXGRmJHtKXldCOlyl/q3GufQupngeOROJ7yf4yn66l/q3HyfQupngT8jcSHacnjID66xfqvx8n0Lqp4FTkniG8p+RoPQVuNdoONEdFPAp8lMQ3jU+LK6Ku1fjWZnVTwCMyPxI6qGo5Q0dJVv1W40NVPAL8iMU3jJ4cA9dZ2hVuNZPoXUzwLMyGxTeTxwy0w9dZekKtx8n0GpngNHIXEnN2aQ+Opuuubr9W4uT6GlQzwMqoyLxFp2aR3JLTn11i/Vfj5PoXVTwBR5M4gD9Um5NB3QVuNdoONEdFPA0Ysmq8j6lUeLK7RrtX41mZ1U8CTkfiR1UM/K1o6St3+rrzomqngWGRGKbxl8ODrptCq/EXPoNTSYBWZCYqe0nDhmph66y9JVVefk+hVQ0mBZ2b7FN6gcNRTddc3pKq8XJ9C6ieAF+bvEtuGIcM8XoJXJ6Sq2LyZVQTAPze4h3MHjh7FzekaD1yNamf+MWkyDrh9mHx3/pY2hQ+uRdTMp8iq7uIvHNTaFD65DUyMqeADUAOABftTtZ5lYITMXhpInVM9E9ITDRowSXFivXFnNo3MhG2xOk40w/20q8mkF/TT+X1R0oPvo+zNNivlj3jsEiAy8s4NPD60DX8VqHDhbG5w84C9FUdlPR/ivqYmrYs/PT2r6eSsPCmejckWGgxXUyUIUaKjyyD75knJegof7nS/uWL5Wtf69J/wCT+rP0IfdRshcDR5AeIQAnNQHgEAZqAI0oAgQEEICAbIBXEIL7IQGK4EFAaFBU2QG1FLcIAwKAlAUeEApOxAZ80SAz54UAk6FAfIJRcL7po/KM+eNeekibTEnCxXiasZ1GYJF6KOZiSOpyFdfEqI/rXDniePSs17vq1J+H7oUX34n2mZi+UP0CkMlkAbEOyp5267wzDnjIW6N2Ti/VfUj3M/OIFwOAL7Ka7z8xPuAPFivO+46BYnXW4yIyxXQyRZZaKfccjn/xCj/u0I5m29C+Vrf+vSfiz30f3EdAxy85sIgPFAVKAhqAIxAWKAu0oCyAghAVO4gMiugsgFIn2KA1qOoQGmyS6AKCgJKABK1AJysQCc0SAUMKA+Hgr7w/JAzMXOSNCE8a8dLA6RYBjrFcIuxm2jpMiqkMr6InfMTeV7tAfiXSsfaq816MzD76Pv723C+WPeJytsgCRv0mubutcOcKp2NMM/OkP0W8VvQvt5b2flkyMuFxnE0mLA2K47jQ0NkXXaLMsqtEOxwfL2WngigFNE8RMDA4yPaSBu7BX5dNoyNJNz7TVvod407jFKzcabM6Eg10LDwVTh+WVy2RHj/T7mrw8C/zrv8A6vb5afcq7GXxP0/yLeVgR860m8GeVu90rsaPxP0+5Lz6HjnUk3jH5U73abHj8Tl7i8vAoc6ku8o/KH9RNjx43l7kvLwDwZ0pTroo/KH9RR6IjxvL3F5eAc5z32+osP7W4flKbIjx8vct4eHMC7OtIO0GeWO90qtDR+J+n3F59CPnZl3hH5U73a1sWPxHl7kvLwIOdiXeMXlD+orsaPG8vcXl4FHZ1pt5Q+Pf1U2NDjeXuS8vAHLnPmcNmjh8dJ7Fl6HhxvIt5lgISZxpb/VI+SZ/VWHoqPG8vcqrDwCwZzpG9pMP7S4flqbKjx8vct49B6POxKO0Y/KXe7W1oePHy9yOsvAL87U+1RQ8s8h9VbWhocby9zN5eBPztVG86fxknsWti0fG8heZYA5c61UdVLSjhMx9YK7GouJ8heZYCUudCvOqGhHDFUH84K7HoPFyzXQirMvQWkzlYgf6OhHBBP6ZimyavjLNf8S3iQA5xMQ3KTxMnvE2VQeufsLxI54r9k8p4qFFpmLjOJpMz5mWXgpI2M6pjGF1YimhlJsIpopSdwMeHX8yifajKOKazL4pn6UpZr7C+aPaXlZdAKDYKA/PoZo9j3PY82wvtVK3vPy7LCWlVoAqqLbC884m0wdPJYrMZFGZGbY1Fd0zBQFVoBWrBSHsW0yMotEJuoCCFQS11lGgNskuFk0UlCqZBdbIWVIeKAqo0UpIFykjSAlYKXY5aTIwzSuqZkuCtpkLqgo4KAo4LLRSllmwDb13IU0gNtCA3ys23NHC4I4N+BV3kOw+V4uyGZ4OosikcDzBeGm7C3tL5o6Rte4SnwyobfSpqho78Ezelq8DpYJ90lmjt2XgfbckcVMkELn3DjGzTBBBDwLO2D3wV+JSxUZySxPUtyOujfcLmUpLGgPgeIYZUMnmBp5wBNKATBLYt0zYg2sRbbX1dFTQcI/aW5eKwPz5Qab7hR8Thra4cLSF6oyT8TnYFgp3u7H4OQjvMcfQszcfFoqTEqyhljPZRyNG6WPA5yF5pONvc1mdO8ijqmnsS5vOF0i2RoJIA06xzrsjB6OUbo5wjiyJoabY7YWdxoDLHZaTICWiE3UBCoLxvsstALpqFBvWkyFQVsE3Qh5ClSFlgC4Lk0atKgrJQjXLpFmWEa8bo511RkIJG90OcLVjJajxkb3TecJ2XgW1A3St7pvhBOy8AD+HZ3bPCas9iWBqxn6Npsk8NAFqCkPGgjf+IFfIuu1l/wC5LNnvVFDBD0OB0cf0KSlZxKeFvQ1c5Vimlvm382aUIrwG4oGM+gxjeK1rehcnJveypJAqqLSB186hTi8oMN1kBAc5SzmN6A7XCKwPA3UBra0AtURnWLoAlHUHUSedSwDhcd085SwC9dB8I090FQcjVRaLuyAPGAPSi7twNfD2wSNsYYdIaj8FH7FvWTxeZLEOCji+5i8Uz2KduWLzFiJbQQO2HQQHhhiPoVVJNbpPNjsrAh2B0Z10dIeGlgPqrarFMvPLN9SdiOAI5P0QP1Gi8kp+qreafjl+Z9SauGCyPHAKLeNF5JT9VS803HL8z6jVxwRT5PUO8KHyOm6qt6p+OX5n1Grhgifk9QbwofI6bqpeqfjl+Z9Rq4YIqcAot40XklP1VLzTccvzPqNXDBEDA6LeNF5JT9VLzTccvzPqNXDBDEeCUW8qPyWn6qXmm45ZvqXsRwCnAaI66KjPDS0/VS803HLN9R2I4Ip8nKDeFD5HTdVW9U/xJfmfUmrhgsjxyboN4UPkdN1UvVP8SX5n1GrhgshWfJ6jGqioxwUtOPVUvFNxy/M+pexHAQlwSlB+qUvk0PVU19LxPN9R2Y4EwYZSjtWl8nh6qa6k4nmx2Y4GpTUVONVPTjghiHoWdbScTzZeysDRjpovuYvFs9inbli8xYg7aWL7qPxbPYnblixYixhaNTWjgaAp2niWwjRUBFJKgHboDyAhwQGfiNGHtO6gPnmOUBY4kBAVwXECxwBKA7mjnD2gjlQDBF0AjPGWm4QD9JKHjvhAFOwgMnGqIOGkBwoDnoJjG5AdJTVIe0Ea9tAMAoAzX3CA8TdAVBQEOQEAoCXBACcEBaN6AaYUBZASCgKysuEBmVMSASIsUAzBIgNCGRANscgLkoCEBzceUVJFYS1dNGdx88QceBt7rrCr0s/uxb+TMuUVvZaXOFhcewarTP6uGeQeEGaPnXpho2sy7+xm0v3MOngvESmzpYcD2Lap/fbC0D/M4FdloesPfYvn0M3iAq/OzSbVLVncv8A0fjK6LQtL4yXPoZvUcGIVGdsfYoCePUBvQwrqtCPxny9zN6wRg4xl/LKLikhaD+skdbzBJaHivO8gqy34HNDK9zXXdA236EhB5iPSvJSaP7O6XI6Km9DqcFzlwR2D4ag7thEel4WI6PnLdJc+hXTJeBsy50aduqlqTuXdC3oJXeOiKR+ZczF5WDBHOfE8W+JSePZ1VrY8uNZe4vKwAQ5zYmO2aWccD43dNlh6KnxLmW8LA1fnRpSNIUtV3/5jrqrRFI/MufQXmOD5CsmdOnOx8TqCDuviHtWtj0nGuZLysGY1flzTuN/i87eAxO9IXOWiqSPmXMqrCfgM4Xl7RtI0pJI+PDIfwBy87qNMtyT+a/c6a2J1MGWOHuAPxyID9LTb0gLFyrHAxrYYhflhhw7dg5HE+hW5VjgY1sMSxyww7arIv9T2JcqxwMa2GJPyvw/fkP8An9iXKscDGthiQcs8N37FzSn1VbjWOB8hroYlRljhp7dh5dNvSFLjWOBjWwxCjK3Dt/U3jWqXKscDyGthiQ7KrDt/UvjWpc6xwPIa2GIE5VYeO3afxgS51jgeQ1sMUGjyyw4a62Hk0z0BVVKsPyMa2GIUZaYZv2LwZeqrcKzwPl1GthiWGWOGnt6DlcR0hS41jgY1sMUFblfhu/6XllaEuVY+G8hrYYoDU5TYce3qXxzPalyrHw5ZMa2GKMubKXD9+03JK0qXOn4HkXWwxAfKygb25FyabugJc6fgZNbDEMzLnDW66sckFU7ojW1UKy/JzXUmuhiMMzhYWO2ieClrPdrS0bWeHnHqNfDEv84uF75ef2aq6iuy61w849Sa+GJ75xsL+/k8mqeorsus8K/NHqLxDE+Cwmy/ehI8jQ2wr0xZguuhAjEIeexAeidtHUVmSKjPxCmse9tLw01GdYszmmxXjT7LOhr0Uwe3ROvaXuo52nOSLbIPAvQu85hJWaQuNe2sSiaTB08xabHVtrKYYadm2NRXZO0yBOyLFZlEqYjMyxXknGw6IvBLtKwkGg916Iu05hGOsrYCxcs2FKFbTIQqQ8gJBQFi1RlKhAGaFpMhVwWgQEAwzZCywLTx2WGioXKwaPNKqARpW0ZCgrRCbqgzmFeKLOg1C9eiMjLQyQu8XaYJYVogdqFF53Nbrc0coV7LJaORYdNMyzKeeTuSyCV4PBotK81JKjW+SXzRtJ4GRXYFVsuXUlW23dUs7elq/MpZ0VvdNZo7xjLAQikLXWNw4awRYjhBVo5iSNdr9NultjWvfCZxaPQyWPSuxkirit2Q1FcpI0iaab7J1FIyDPSMsupkBK0ELlOJpMTcLLyNWM6IPDJdd4SMtBgV2TtMFwjQIus2lJXRMyQUBCAIwoCzmKFJjKIBHtWyASFQFhcoAs8dxdZaBnSNWGaKBZKXatoywgK0QtdW0G8zIKa9nVETT+ix7x59FfPvSUfCLPXqHiadDm+Z/SVjz/ZwNZblc51+ZHpWS+7DN2/si6hYnWYTm7w4gB7qmU/pTNaOD/ptaVh6Wp3usXy6tlu8DoqTIXC47Woo3W+9dJLfw3FcZaRrMvO/l3fQ0qGjwNWmyeomW0KOlbbURTxA89lxlWaaW+cn82bUIrch+KnY36LGN4rWt6Fxcm97LYeeCoUwcoMPEjS4DhQHzDGsNbpdnG14G09od0rUZSi7YuwjSe8LgmGUJI06aM7vZSDocu6rlOt0mZ1UMDs6bJbDdgiigIPdNL/xEquu1jjZNVDA0Ism6Cxb8SpBfV/F4vYsOtU73zebLq4YGNVZNUbHfUqXX9xF7EvVNxvNjVwwRo4fglA4fUaS42/i8XsS9U/HLNjVwwQ3JgVJtUdIP2WDqrOvpeN5vqXsxwOcxrJWjcD/ABSnHfbE1h522VVYpV5nmOxHA4+fI2l0rAzRcR4cP84PSvRDSFLHfY/89DDoYsPFm6Y/6Fa5g3HUwkPOJG9C9UdLNb4c/ZmLusRtma0/1gPIf/ut7YXw/wBX8SXdYlnZrgNdc48FKG/mFYel34Q5+wu/qGp82kJ2DVzckUY9JWdrz8ILNluyxGTmsp991HgRexXbFJwrmS7LEFJmsh+zWTDjRRu6CEWmJ+MFmxdliAOavcxC3DR3/OC6LTGNH+r+JLt6h481d9eIA8FFb85HphfD/V/EXb15FhmtjB7KtkPFga3peVja8uBZ+xbssR2LNdAR9bn8XEm2J8K5i7LEpJmog35P4uMptmk4FzF2WIq/NQPs4gRxqQO6JQtrTONH+r2JdvULHmqfa38It8iPv1dsr4f6v4h1b15CVXmocP8AuDfIj79TbC+H+r+JVV/UVGbNg+lWPPFp2t6Xlc3pZ+EOfsi3f1GIs2lPt1NRyNhHoWdrUnCuYu6xGY82NJt1NXyGnH5ZTa9Lwx59S3eIb5r6PfFd4dL7lNr03DHn1GogNVjbFflHc9A9AaFJXljhsoDraKoEjQRr20Ay0oAhQEOF0AtOy4I2igOKylwu9yAgOJu6J/eugOyyfxS4DSUB08Ul0BFdFptvthAZEEhY5AbcEgcLoANXDcFActitJY3CABh1VY2KA6WlmuEA2BdALkaJQD0DrhAecEBRAFhegDSsuLoCkL7FAOOFwgAOCAtG5AVq23CAxKgWQA4ygGI3IBgOQHO4jGgEYNgoCKx1tkIDaydxIgjzoDqpaljBpPexjd17mtHnVUXLcrQ3YZ8uV+HMNnV1Nca2slbI4cjblemNSrEu9QeVn1ObpYLezMnzkYYw2E0j+LTzDzuaAu60VWXvSXzX7GbxD/EZFdnVpW/Qpap+5pfAsB5Q4nzLvHQ1K98lz6GHWY4M5/Ec5xkBDaFoG66pN/NGumxrN8+XuS84I5Ouyu0zd1MGj9Ga55i0Lz0mjezuly9zcae3eh7AcpYS4AP0D3MlmHkOo8hXhnV6SG9ZHVSTPqGEV3wjRY32Bq2VxNGw142yBwmyAxMUqIWm/wANCOGWMelb1c8HkS1AaHKGlZ9KrpmjddURAecrSoKV7ovJk7UcR6bKnDrfXqU8WZj/AMJK6Kp1h/7byI6WC8UZNdlFh7hsVlP4YCOp1heR5E1sMUY3xqJ7rwyxSj9XIx/QVxnRzh95Nfijaae428Mq7rBTehkQBpWXFwgK0jrFAOSNQACEB4IBqB+0gKSixQDEElxZAS9qAGgPPOwgMmqagFEAaIoBoFAfFMQy6r5Aeyhj/s4Qf3hcvoNm0EcX+L6WHj18jIdlNXHXVP8A8LImfhaEVUoF5fqXWSfiJ1GKVD/pVNQ7hnlI5rrboaNLuiskZUpYi0ddLqM0tv7V9ulYgop7lkitt+Jo0zw8Wdsu2idk86/Top93ccJIu02K7mRl+yLqMpGsWRMCrxZGgKVDLry0kDcWZszbL86kjYzsnaGpJdHUbcGwutFPEkkO7DtYB752V+hCWBxaC6AI1DmVl3kQs4WXB9xsbpX32CusWZZErLbC0yIUmZt7Y1FeecTcWOUOUFZAQI6mQDcdoyjgs8G3IvDKr0Un9qK+n0OqnJeJ0VNnEr2jtZ3Ghd6rwqtG0Dxz9hrpD9PnKrzsaNIB3oZfTIVrZdX/ALs10I6eRSXLzEAdh0Le+2FvrEotG0Cxz/8Ag10zxy4xNw2Ku3BTUfpjK7R0fVuDnLqZ108RN+XGKjt0+TUPulrZ9V4Ocv8AkNfMvHnAxMa52P41PAPwtCw9GVZ+Vr5v97QqeeI1FnHxHuoPED2rOy6v65l18/QNJnCxFw/nIhwQM9N1NmVfB5jXzFW5d4nfYq9HvCnpPTGV0Wj6svJzl1I6aeIR2XWKb9d5PRe6W9n1Xg5y6k108foeZnBxNuuoY/jU9P6rQsvRlWe6NnzY188Qhzj4j3VP4j2FY2XV/XMuvmKzZw8QO3T8kJ6yw9F0Hrn7F18/TISly6xE6pmM4sEB/E0otHVdeFvzf7WDXTA/LPEt+O5IKQdEa6Ko1bg5vqXXTxLjLLEt+SeLp+otXGr8HN9TGtniYssS9konNCr2LhKBu0E4LlJFQq7YK8r7mdB6jltZeuhkc5I0Hbu6vdFnINA7aW2Qq42KwUtK24utEFJAsSRUZ9SxeCmgdosVbsLyLuZ0Y9TvuvdRTtOMkNxuXqMFalm3urnNGkAY6xWIuwpoPGk0O3F3RhikgWZK0qFZGryTjYdEWiK3BkkMsdtrumZHmu0moyFoTtKoAp2rSILqkLBAGDthQpDTsqFDaS0jIJzlQUc5RsAXLLNIEVgp4IgXutksP//Z",
+        "description": "Famous for its ancient ruins and beautiful islands.",
+        "capital": "Athens",
+        "popularAttractions": ["Acropolis", "Santorini", "Delphi"]
+    },
+    {
+        "country": "South Africa",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+        "description": "Known for its diverse wildlife and landscapes.",
+        "capital": "Pretoria",
+        "popularAttractions": ["Kruger National Park", "Table Mountain", "Cape of Good Hope"]
+    },
+    {
+        "country": "Turkey",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+        "description": "A bridge between East and West with rich history.",
+        "capital": "Ankara",
+        "popularAttractions": ["Hagia Sophia", "Cappadocia", "Ephesus"]
+    },
+    
+];
+
+
+        let str = "";
+        data.forEach((data , index)=>{
+            str += `
+                <div id="p-card" style="background-color: black; " class="p-card container" data-aos="flip-up">
+            <img src=${data.imageUrl} alt="">
+            <h2 style="font-size: 21px; color: orange;">40 Days in ${data.country}</h2>
+            <p style="color: white;">3 Different Cities</p>
+            <p style="color: white;">${data.description}</p>
+            <p style="color: white;">$ : <del>799</del></p>
+            <p style="color: white;">$ : 699</p>
+            <button class="btnOpenForm" style="background-color: orange;" class="button" onclick="openpopup()">
+                Book now
+                <svg class="cartIcon" viewBox="0 0 576 512">
+                    <path
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+            `
+        })
+
+        document.getElementById("products-card").innerHTML = str;
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+   $(document).ready(function(){
+    $('#inp').on("keyup" , function(){
+        var inp = $('#inp').val().toUpperCase()
+        $('#products-card #p-card').hide();
+        $('#products-card #p-card h2').filter(function(){
+            return $(this).text().toUpperCase().indexOf(inp) != -1;
+        }).parent().show();
+    });
+});
+</script>
+
+</body>
+
+</html>
